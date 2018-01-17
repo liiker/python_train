@@ -25,58 +25,29 @@
          top: 30px;
          right: 0px;
      }
+
+     .post { margin:10px; text-align:left; height:100px; border:1px solid #ccc; color:#444;   }
+     .post .title { padding:5px; height:30px; border-bottom:1px solid #ccc;   }
     </style>
   </head>
   <body>
-    <div style="text-align: center">
-      <h1>hello, {{ name }}</h1>
+    <div style="text-align:">
+      <div style="height:100px; padding-left:50px;">
+        <img id="logo" src="/static/logo.jpeg" style="float:left; height:50px; width:50px;"/>
+        <div style="float:left;font-size:20px; font-weight:bold; margin-top:20px;">{{ name }}'s Blog</div>
+      </div>
       <div>
       <ul>
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
+        {% for post in posts %}
+        <div class="post">
+          <div class="title">
+            {{ post[1] }}
+          </div>
+            {{ post[2] }}
+        </div>
+        {% endfor %}
       </ul>
       </div>
-      <div>
-        <span class="item">this is span</span>
-        <span class="item">this is span</span>
-        <span class="item">this is span</span>
-        <span class="item">this is span</span>
-      </div>
-      <div style="height:220px; background-color:#999">
-      <div id="profile">
-      </div>
-      </div>
-      <img id="logo" src="/static/logo.jpeg" />
     </div>
-    <div>
-      <video src="">
-      </video>
-    </div>
-    <p style="height:2000px;"></p>
-        <p></p>
-    <p></p>
-    <p></p>
-    <p></p>
-    <p></p>
-    <p></p>
-    <p></p>
-    <p></p>
-    <p></p>
-    <p></p>
-    <p></p>
-    <p></p>
-    <p></p>
-    <p></p>
-    <p></p>
-    <p></p>
-    <p></p>
-    <p></p>
-    <p></p>
-    <p></p>
-    <p></p>
-    <p></p>
-    <p></p>
-    <p></p>
   </body>
 </html>
